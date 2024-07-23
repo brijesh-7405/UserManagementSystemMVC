@@ -27,7 +27,7 @@ public class SwaggerConfig{
 	}
 	
 	@Bean
-    public Docket firstapi(){
+    public Docket secondapi(){
 		
 		return new Docket(DocumentationType.SWAGGER_2)
 				.groupName("secondcontroller")
@@ -40,10 +40,10 @@ public class SwaggerConfig{
 	}
 
 	@Bean
-    public Docket secondapi(){
+    public Docket thirdapi(){
 		
 		return new Docket(DocumentationType.SWAGGER_2)
-				.groupName("thirsdcontroller")
+				.groupName("thirdcontroller")
             .select()
             .apis(RequestHandlerSelectors.basePackage("com.User.User_Management_System.Controller.third.controll"))
             .build().
@@ -51,6 +51,53 @@ public class SwaggerConfig{
 		
 	}
 
+	@Bean
+    public Docket fourthapi(){
+		
+		return new Docket(DocumentationType.SWAGGER_2)
+				.groupName("fourthcontroller")
+            .select()
+            .apis(RequestHandlerSelectors.basePackage("com.User.User_Management_System.Controller.fourth.controll"))
+            .build().
+            apiInfo(apiInfo()); 
+		
+	}
+
+	@Bean
+    public Docket fifthapi(){
+		
+		return new Docket(DocumentationType.SWAGGER_2)
+				.groupName("fifthcontroller")
+            .select()
+            .apis(RequestHandlerSelectors.basePackage("com.User.User_Management_System.Controller.fifth.controll"))
+            .build().
+            apiInfo(apiInfo()); 
+		
+	}
+
+	@Bean
+    public Docket sixthapi(){
+		
+		return new Docket(DocumentationType.SWAGGER_2)
+				.groupName("sixthcontroller")
+            .select()
+            .apis(RequestHandlerSelectors.basePackage("com.User.User_Management_System.Controller.sixth.controll"))
+            .build().
+            apiInfo(apiInfo()); 
+		
+	}
+
+	@Bean
+    public Docket seventhapi(){
+		
+		return new Docket(DocumentationType.SWAGGER_2)
+				.groupName("seventhcontroller")
+            .select()
+            .apis(RequestHandlerSelectors.basePackage("com.User.User_Management_System.Controller.seventh.controll"))
+            .build().
+            apiInfo(apiInfo()); 
+		
+	}
     private ApiInfo apiInfo() {
     	
     	return new ApiInfoBuilder()
